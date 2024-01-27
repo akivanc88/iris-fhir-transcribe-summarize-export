@@ -1,22 +1,11 @@
 # IRIS FHIR Transcribe-Summarize-Export
 
-[![Gitter](https://img.shields.io/badge/Available%20on-Intersystems%20Open%20Exchange-00b2a9.svg)](https://openexchange.intersystems.com/package/IRIS-FHIR-Transcribe-Summarize-Export)
-[![Quality Gate Status](https://github.com/ikram-shah/iris-fhir-transcribe-summarize-export/actions/workflows/objectscript-quality.yml/badge.svg)](https://community.objectscriptquality.com/dashboard?id=intersystems_iris_community/iris-fhir-transcribe-summarize-export)
 
-💻  Contributors - [Ikram Shah](https://community.intersystems.com/user/ikram-shah) and [Sowmiya Nagarajan](https://community.intersystems.com/user/sowmiya-nagarajan).
-
-🚀  Built with [IRIS FHIR](https://github.com/intersystems-community/iris-fhir-template), [OpenAI](https://openai.com/), [Langchain](https://python.langchain.com/), [Vue.js](https://vuejs.org/), [Google Docs/Sheets API](https://developers.google.com/docs/api/reference/rest).
-
-## Demo
-
-https://github.com/ikram-shah/iris-fhir-transcribe-summarize-export/assets/20276568/9edfedab-2d3d-442c-8853-21123bc49224
-
-## Overview
 
 This is a full-stack application that allows practitioners and other clinicians to record voice notes linked to a subject and also export them to Google Docs/Sheets. 
 
 1. The UI enables voice recording and the audio is transcribed to text using [Open AI Whisper API](https://openai.com/research/whisper).
-2. Then the notes are summarized using [Open AI text-davinci-003](https://platform.openai.com/docs/models/gpt-3-5) model and stored as [Document References](https://build.fhir.org/documentreference.html) in FHIR server. 
+2. Then the notes are summarized using [Open AI gpt4-turbo](https://platform.openai.com/docs/models/gpt-4) model and stored as [Document References](https://build.fhir.org/documentreference.html) in FHIR server. 
 3. Finally, there is an option to export the stored documents to **Google Docs** in an account of user's choice through OAuth2. Other data like Observations can be exported to **Google Sheets**.
 
 > **Note** - This implements a [Community idea](https://ideas.intersystems.com/ideas/DPI-I-197)💡. Docs and Sheets export is directly handled via REST api in IRIS now. It's not an interoperability adapter yet and it's WIP.
